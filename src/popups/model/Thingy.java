@@ -6,7 +6,7 @@ public class Thingy
 	private double valuething;
 	private String wordthing;
 	private boolean isvalidthing;
-	
+	//Declarations----------------------------
 	public Thingy()
 	{
 		this.numberthing = 666;
@@ -38,11 +38,24 @@ public class Thingy
 	
 	//Setters----------------------------------
 	
-	public void setNumberthing(int numberthing);
+	public void setNumberthing(int numberthing)
+	{
+		this.numberthing = numberthing;
+	}
 	
-	public void setValuething(double valuething);
+	public void setValuething(double valuething)
+	{
+		this.valuething = valuething;
+	}
 	
-	public void setWordthing(String wordthing);
+	public void setWordthing(String wordthing)
+	{
+		this.wordthing = wordthing;
+	}
 	
-	public void setIsvalidthing(boolean isvalidthing);
+	public void setIsvalidthing(boolean isvalidthing)
+	{
+		this.isvalidthing = isvalidthing;
+	}
+	
 }
