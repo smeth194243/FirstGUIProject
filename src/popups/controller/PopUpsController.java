@@ -4,6 +4,6 @@ public class PopUpsController
 {
 	public void start()
 	{
-		System.out.println("");
+		System.out.println(" ");
 	}
 }
