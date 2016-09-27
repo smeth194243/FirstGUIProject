@@ -2,10 +2,15 @@ package popups.view;
 
 import javax.swing.JOptionPane;
 
+/**
+ * Popup display class with three methods for GUI.
+ * @author smor7432
+ *@version September 27, 2016
+ */
 public class PopupViewer
 {
 	/**
-	 * Creates a popu to show the user a String.
+	 * Creates a popup to show the user a String.
 	 * @param message The String to show the user.
 	 */
 	public void displayMessage(String message)
@@ -27,5 +32,20 @@ public class PopupViewer
 		response = JOptionPane.showInputDialog(null, question);
 		
 		return response;
+	}
+	
+	/**
+	 * Creates a popup to prompt user to choose yes/no/cancel to the supplied 
+	 * question.
+	 * @param question
+	 * @return
+	 */
+	public int collectOption(String question)
+	{
+		int optionNumber = 0;
+		
+		optionNumber = JOptionPane.showConfirmDialog(null, question);
+		
+		return optionNumber;
 	}
 }
