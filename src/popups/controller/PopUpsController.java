@@ -17,7 +17,7 @@ public class PopUpsController
 		String answer = "sample";
 		while(answer != null && !answer.equals(""))
 		{
-		display.displayMessage("Look! Words! On the monitor!!!");
+		display.displayMessage("Look! Words! On the monitor!!!!");
 		
 		answer = display.collectResponse("Type your question here :D");
 		
