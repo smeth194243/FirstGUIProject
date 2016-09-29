@@ -1,20 +1,30 @@
 package popups.controller;
 
 import popups.view.PopupViewer;
+import popups.model.Thingy;
+import java.util.List;
+import java.util.ArrayList;
 
 public class PopUpsController
 {
 	private PopupViewer display;
-	
+	private List<Thingy> thingyList;
+
 	public PopUpsController()
 	{
 		display = new PopupViewer();
+		thingyList = new ArrayList<Thingy>();
+	
 	}
 	
 	public void start()
 	{
-		
-		String answer = "sample";
+		learnLists();
+	}
+	
+	private void askQuestionLoop()
+	{
+String answer = "sample";
 		
 		while(answer != null && !isDouble(answer))
 		{
@@ -70,6 +80,12 @@ private boolean isInteger(String potentialValue)
 }
 
 
-
+	private void learnLists()
+	{
+		display.displayMessage("This is the size of the list: " + thingyList.size());
+		Thingy firstThingy = new Thingy();
+		thingyList.add(firstThingy);
+		display.displayMessage("This is the size of the list: " + thingyList.size());
+	}
 
 }
