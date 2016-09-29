@@ -13,15 +13,14 @@ public class PopUpsController
 	
 	public void start()
 	{
-		int count = 0;
+		
 		String answer = "sample";
-		while(answer != null && !answer.equals(""))
+		
+		while(answer != null && !isDouble(answer))
 		{
-		display.displayMessage("Look! Words! On the monitor!!!!");
+		//display.displayMessage("Look! Words! On the monitor!!!!");
+		answer = display.collectResponse("You need to type in a double!");
 		
-		answer = display.collectResponse("Type your question here :D");
-		
-		count++;
 		}
 	}
 /**
