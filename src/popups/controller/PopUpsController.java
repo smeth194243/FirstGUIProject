@@ -116,8 +116,28 @@ private boolean isInteger(String potentialValue)
 		
 		for (int index = 0; index < thingyList.size(); index++)
 		{
-			display.displayMessage("The message at " + index + "is" + thingyList.get(index).getWordthing());
+			display.displayMessage("The message at " + index + " is " + thingyList.get(index).getWordthing());
 		}
+		
+		thingyList.get(3).setWordthing("I just changed what is inside");
+		Thingy tempThing = thingyList.get(4);
+		tempThing.setWordthing("Also changed");
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWordthing());
+		}
+		
+		Thingy replacement = new Thingy();
+		replacement.setWordthing("I am a replicant");
+		
+		thingyList.set(0, replacement);
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWordthing());
+		}
+		
 	}
 
 }
