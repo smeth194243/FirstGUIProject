@@ -98,6 +98,26 @@ private boolean isInteger(String potentialValue)
 		Thingy lastThingy = new Thingy();
 		thingyList.add(lastThingy);
 		
+		for (int index = 0; index < 5; index++)
+		{
+			Thingy loopThingy = new Thingy();
+			thingyList.add(loopThingy);
+		}
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage("The thingy at this spot has words of: " + thingyList.get(index).getWordthing());
+		}
+		
+		Thingy specialThingy = new Thingy();
+		specialThingy.setWordthing("not null stuff");
+		
+		thingyList.add(1, specialThingy);
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage("The message at " + index + "is" + thingyList.get(index).getWordthing());
+		}
 	}
 
 }
