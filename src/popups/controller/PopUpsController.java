@@ -20,6 +20,7 @@ public class PopUpsController
 	public void start()
 	{
 		learnLists();
+		askQuestionLoop();
 	}
 	
 	private void askQuestionLoop()
@@ -121,7 +122,7 @@ private boolean isInteger(String potentialValue)
 		
 		thingyList.get(3).setWordthing("I just changed what is inside");
 		Thingy tempThing = thingyList.get(4);
-		tempThing.setWordthing("Also changed");
+
 		
 		for (int index = 0; index < thingyList.size(); index++)
 		{
@@ -131,12 +132,25 @@ private boolean isInteger(String potentialValue)
 		Thingy replacement = new Thingy();
 		replacement.setWordthing("I am a replicant");
 		
+		Thingy old = thingyList.set(0, replacement);
+		
 		thingyList.set(0, replacement);
 		
 		for (int index = 0; index < thingyList.size(); index++)
 		{
 			display.displayMessage(thingyList.get(index).getWordthing());
 		}
+		old.setWordthing("I was replaced :(");
+		display.displayMessage(old.getWordthing());
+		
+		thingyList.remove(4);
+		display.displayMessage("The size is now " + thingyList.size());
+		old = thingyList.remove(4);
+		display.displayMessage("The size is now " + thingyList.size());
+		display.displayMessage("This is what I removed: " + old.getWordthing());
+		thingyList.add(0, old);
+		
+		thingyList.get(2).setWordthing("I have been gotten");
 		
 	}
 
