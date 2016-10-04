@@ -150,6 +150,21 @@ private boolean isInteger(String potentialValue)
 		display.displayMessage("This is what I removed: " + old.getWordthing());
 		thingyList.add(0, old);
 		
+		for (Thingy currentThingy : thingyList)
+		{
+			display.displayMessage("The current value is " + currentThingy.getWordthing());
+		}
+		
+		for (Thingy currentThingy : thingyList)
+		{
+			currentThingy = new Thingy();
+		}
+		
+		for (Thingy currentThingy : thingyList)
+		{
+			thingyList.remove(0);
+		}
+		//Expirimentation
 		thingyList.get(2).setWordthing("I have been gotten");
 		
 	}
