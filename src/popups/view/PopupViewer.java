@@ -25,7 +25,7 @@ public class PopupViewer
 	 * @return The users response as a String.
 	 */
 	
-	public String collectResponse(String question)
+	public  String collectResponse(String question)
 	{
 		String response = " ";
 		
@@ -48,4 +48,5 @@ public class PopupViewer
 		
 		return optionNumber;
 	}
+	
 }
