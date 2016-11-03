@@ -14,71 +14,88 @@ public class PopUpsController
 	{
 		display = new PopupViewer();
 		thingyList = new ArrayList<Thingy>();
+		
 
 	}
 
 	public void start()
 	{
+		indexOfTest();
 		//learnLists();
 		//askQuestionLoop();
 		
-		String name = display.collectResponse("Hello. What is your name?");
-		if(name.equalsIgnoreCase("Seth"))
-		{
-			display.displayMessage("You're a boss.");
-			String question = display.collectResponse("How old are you?");
-			if(question.equalsIgnoreCase("3"))
-			{
-				display.displayMessage("Wow, Thats young!");
-			}
-		}
-		
-		if(name.equalsIgnoreCase("Jacob"))
-		{
-			display.displayMessage("The answer is command Q.");
-		}
-		if(name.equalsIgnoreCase("Isaac"))
-		{
-			display.displayMessage("You are a bro.");
-		}
-		if(name.equalsIgnoreCase("Arick"))
-		{
-			display.displayMessage("You are the reason I have an A in this class.");
-		}
-		if(name.equalsIgnoreCase("Tyler"))
-		{
-			display.displayMessage("Get the heck off my computer!");
-		}
-		else
-		{
-			display.displayMessage("Well, it appears we havent met yet!");
-			String live = display.collectResponse("Where do you live bro?");
-			
-			if(live.equalsIgnoreCase("Utah"))
-			{
-				display.displayMessage("Oh cool, I live there too!");
-			}
-			else
-			{
-				display.displayMessage("Oh cool! I live here in Utah!");
-			}
-		}
-		
-		int age = this.stringToInt(display.collectResponse("How old are you?"));
-		if(age <= 10)
-		{
-			display.displayMessage("You are pretty young!");
-		}
-		else if(age == 16)
-		{
-			display.displayMessage("Cool! Im 16 as well!");
-		}
-		else
-		{
-			display.displayMessage("Oh cool! Im 16.");
-		}
+//		String name = display.collectResponse("Hello. What is your name?");
+//		if(name.equalsIgnoreCase("Seth"))
+//		{
+//			display.displayMessage("You're a boss.");
+//			String question = display.collectResponse("How old are you?");
+//			if(question.equalsIgnoreCase("3"))
+//			{
+//				display.displayMessage("Wow, Thats young!");
+//			}
+//		}
+//		
+//		if(name.equalsIgnoreCase("Jacob"))
+//		{
+//			display.displayMessage("The answer is command Q.");
+//		}
+//		if(name.equalsIgnoreCase("Isaac"))
+//		{
+//			display.displayMessage("You are a bro.");
+//		}
+//		if(name.equalsIgnoreCase("Arick"))
+//		{
+//			display.displayMessage("You are the reason I have an A in this class.");
+//		}
+//		if(name.equalsIgnoreCase("Tyler"))
+//		{
+//			display.displayMessage("Get the heck off my computer!");
+//		}
+//		else
+//		{
+//			display.displayMessage("Well, it appears we havent met yet!");
+//			String live = display.collectResponse("Where do you live bro?");
+//			
+//			if(live.equalsIgnoreCase("Utah"))
+//			{
+//				display.displayMessage("Oh cool, I live there too!");
+//			}
+//			else
+//			{
+//				display.displayMessage("Oh cool! I live here in Utah!");
+//			}
+//		}
+//		
+//		int age = this.stringToInt(display.collectResponse("How old are you?"));
+//		if(age <= 10)
+//		{
+//			display.displayMessage("You are pretty young!");
+//		}
+//		else if(age == 16)
+//		{
+//			display.displayMessage("Cool! Im 16 as well!");
+//		}
+//		else
+//		{
+//			display.displayMessage("Oh cool! Im 16.");
+//		}
 	}
 
+	private void indexOfTest()
+	{
+		String words = " ";
+		String sample = "a";
+		int index = -99;
+		
+		index = "sfdfsdfs".indexOf(sample, 3);
+		
+		System.out.println("The index of sample in words is: " + index);
+		
+		index = sample.indexOf("");
+		
+		System.out.println("The index of words in the sample is: " + index);
+		
+	}
 	private void askQuestionLoop()
 	{
 		String answer = "sample";
